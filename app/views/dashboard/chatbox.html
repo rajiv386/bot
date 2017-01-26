@@ -1,0 +1,21 @@
+<h3 class="templatehead" style = "background-color:#3ca2e0; padding: 25px">Chatbox</h3>
+<hr>
+
+<input type="text" name="chat" id="chatbox" style = "width: 800px;"
+	placeholder="Hi there! Type here to talk to me." ng-model = "userInput">
+	<button type="button" id = "send" ng-click = sendInput()>Send</button>
+<div>
+<br>
+
+
+	<p id="chatlog" class="chatlog" >
+	{{chatlog}}
+	</p>
+	<p id="demochat" class="chatLog" style = "opacity: 0.4;">
+
+			<b>Chatbot:</b> I'm confused<br> Test<br> <b>Chatbot:</b>My
+		name is Chatbot<br> name<br> <b>Chatbot:</b> Howdy! <br>
+		Hi<br>
+
+	</p>
+</div>
