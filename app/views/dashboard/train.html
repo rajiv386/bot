@@ -5,8 +5,8 @@
 
 	<form>
 		<b> Enter input: </b><br> <input type="text" name="inputtext"
-			ng-model=inputtext> &nbsp;
-		<button class="btn btn-default" type="button" id="ask">Ask</button>
+			ng-model="inputtext" style = "width: 800px;"> <br>
+		<button class="btn btn-default" type="button" id="ask" ng-click = sendInput()>Ask</button>
 		<button class="btn btn-default" type="button" id="clear">Clear</button>
 	</form>
 	<br> <br>
@@ -17,13 +17,13 @@
 
 	<form id=AddResponseForm style="visibility: hidden;">
 		<b> Enter a text response: </b><br> <input type="text"
-			name="inputresponse" ng-model=inputresponse> &nbsp; <br>
+			name="inputresponse" ng-model="inputresponse0"> &nbsp; <br>
 		<br>
 		<button class="btn btn-default" type="button" id="addresp"
 			ng-click=addnewresp()>Add New</button>
 		<br> <br>
 
-		<button class="btn btn-default" type="button" id="clear">Save</button>
+		<button class="btn btn-default" type="button" id="save" ng-click = sendNewResponses()>Save</button>
 
 	</form>
 </div>
