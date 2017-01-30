@@ -7,10 +7,10 @@
  * # MainCtrl
  * Controller of cbapp
  */
-angular.module('yapp')
-  .controller('FilesCtrl', function($scope, $state) {
+angular.module('yapp').controller('FilesCtrl', FilesCtrl);
+function FilesCtrl($scope, $state) {
 
-    $scope.$state = $state;
-    $scope.list_of_files = ['File1', 'File2', 'File3', 'File4'];
+	$scope.$state = $state;
+	$scope.list_of_files = [ 'File1', 'File2', 'File3', 'File4' ];
 
-  });
+}

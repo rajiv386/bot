@@ -9,14 +9,15 @@
 				<!-- <img
 								src="http://pipeline.web.att.com:8085/uui/public/img/globe.png"
 								class="att-globe-perm" alt="AT&amp;T" align="left">
-							
+
 					<h2 class="brand"align="left">AT&T</h2> -->
 					        <img src="images/flat-avatar.png" class="user-avatar" /><br />
-					<h3>{{dashuser}}</h3>
+					<h1>{{dashuser}}</h1>
+					<h3>Department : {{dashuser.dept}}</h3>
 					<a ui-sref="login"
 						class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
 				</div>
-				
+
 				<ul class="nav nav-sidebar">
 					<li ng-class="{active: $state.includes('overview')}"><a
 						ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>
@@ -28,9 +29,9 @@
 						ui-sref="train">Train</a></li>
 					<li ng-class="{active: $state.includes('reports')}"><a
 						ui-sref="files">Files</a></li>
-					<li ng-class="{active: $state.includes('reports')}"><a
+					<!-- <li ng-class="{active: $state.includes('reports')}"><a
 						ui-sref="logs">Logs</a></li>
-
+ -->
 				</ul>
 
 			</div>

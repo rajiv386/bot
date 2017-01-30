@@ -8,8 +8,8 @@
 angular
 		.module('yapp')
 		.controller(
-				'ChatCtrl',
-				function($scope, $state) {
+				'ChatCtrl',ChatCtrl);
+				function ChatCtrl($scope, $state) {
 					$scope.chatlog = "";
 
 					$scope.$state = $state;
@@ -18,50 +18,49 @@ angular
 
 						var elem = document.getElementById("demochat");
 						if (elem) {
-							elem.parentNode.removeChild(elem);//
+							elem.parentNode.removeChild(elem);
 						}
+						// console.log("aa===", $scope.userInput)
+						// console.log("log===", $scope.chatlog)
 
-						console.log("aa===", $scope.userInput)
-						console.log("log===", $scope.chatlog)
-
-						document.getElementById("chatlog").innerHTML = $scope.userInput
+						document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
 								+ "<br>"
-								+ document.getElementById("chatlog").innerHTML
-						$scope.chatlog = $scope.userInput + "\n\r "
-								+ $scope.chatlog;
+								+ $scope.userInput
+						$scope.chatlog = $scope.chatlog + "\n\r "
+								+ $scope.userInput;
 
-						if ($scope.userInput == '') {
+						if (!$scope.userInput) {
 
-							document.getElementById("chatlog").innerHTML = "<b>ChatBot:</b> You entered nothing."
+							document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
 									+ "<br>"
-									+ document.getElementById("chatlog").innerHTML
-							$scope.chatlog = "<b>ChatBot:</b> Howdy!" + "\n "
-									+ $scope.chatlog;
+									+ "<b>ChatBot:</b> You did not enter anything!"
+							$scope.chatlog = $scope.chatlog + "\n "
+									+ "<b>ChatBot:</b> You did not enter anything!";
 
 						}
 						else if ($scope.userInput == 'hi') {
 
-							document.getElementById("chatlog").innerHTML = "<b>ChatBot:</b> Howdy!"
+							document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
 									+ "<br>"
-									+ document.getElementById("chatlog").innerHTML
-							$scope.chatlog = "<b>ChatBot:</b> Howdy!" + "\n "
-									+ $scope.chatlog;
+									+ "<b>ChatBot:</b> Howdy!"
+							$scope.chatlog = $scope.chatlog + "\n "
+									+ "<b>ChatBot:</b> Howdy!";
 
 						} else if ($scope.userInput == 'name') {
 
-							document.getElementById("chatlog").innerHTML = "<b>ChatBot:</b> My name is Chatbot"
+							document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
 									+ "<br>"
-									+ document.getElementById("chatlog").innerHTML
-							$scope.chatlog = "<b>ChatBot:</b> My name is Chatbot"
-									+ "\n " + $scope.chatlog;
+									+ "<b>ChatBot:</b> My name is Chatbot"
+							$scope.chatlog = $scope.chatlog
+									+ "\n " + "<b>ChatBot:</b> My name is Chatbot";
 
 						} else {
 
-							document.getElementById("chatlog").innerHTML = "<b>ChatBot:</b> I'm confused"
+							document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
 									+ "<br>"
-									+ document.getElementById("chatlog").innerHTML
-							$scope.chatlog = "<b>ChatBot:</b> I'm confused"
-									+ "\n " + $scope.chatlog;
+									+ "<b>ChatBot:</b> I'm confused"
+							$scope.chatlog = $scope.chatlog
+									+ "\n " + "<b>ChatBot:</b> I'm confused";
 
 						}
 
@@ -69,8 +68,5 @@ angular
 
 					}
 
-					/*
-					 * $scope.list_of_files = ['File1', 'File2', 'File3',
-					 * 'File4'];
-					 */
-				});
+
+				}
