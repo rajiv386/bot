@@ -12,10 +12,8 @@
 
 					<h2 class="brand"align="left">AT&T</h2> -->
 					        <img src="images/flat-avatar.png" class="user-avatar" /><br />
-					<h1>{{dashuser}}</h1>
-					<h3>Department : {{dashuser.dept}}</h3>
-					<a ui-sref="login"
-						class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+					<h2>{{dashuser}}</h2>
+					<h4>Department : {{dashuser.dept}}</h4>
 				</div>
 
 				<ul class="nav nav-sidebar">
@@ -26,7 +24,7 @@
 					<li ng-class="{active: $state.includes('reports')}"><a
 						ui-sref="chatbox">Chatbox</a></li>
 					<li ng-class="{active: $state.includes('reports')}"><a
-						ui-sref="train">Train</a></li>
+						ui-sref="train">Training</a></li>
 					<li ng-class="{active: $state.includes('reports')}"><a
 						ui-sref="files">Files</a></li>
 					<!-- <li ng-class="{active: $state.includes('reports')}"><a

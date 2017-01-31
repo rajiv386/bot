@@ -1,16 +1,15 @@
 <div>
-<h2 class="templatehead" style = "background-color:#3ca2e0; padding: 25px; color:white">Chatbox</h3>
+<h2 class="templatehead" style = "background-color:#3ca2e0; padding: 25px; color:white">Chatbox</h2>
 <hr>
-
 <div style="bottom:80px; position:absolute;">
-<input type="text" name="chat" id="chatbox" style = "width: 800px;"
+<input type="text" name="chat" id="chatbox" class ="inputText"
 	placeholder="Hi there! Type here to talk to me." ng-model = "userInput">
-	<button type="button" id = "send" ng-click = sendInput()>Send</button>
+	<button type="button" id = "send" ng-click = sendUserChatInput()>Send</button>    <!--sendInput()-->
 	</div>
 <div>
 <br>
 
-
+<div class="userchat">
 	<p id="chatlog" class="chatlog"  style="bottom:100px; position:absolute;">
 	{{chatlog}}
 	</p>
@@ -21,6 +20,9 @@
 								confused<br>
 
 	</p>
-<!-- 	<p id = "atbottom" style="bottom:10px; position:absolute;">This is to be displayed at the  bottom of the page.</p> -->
+</div>
+
+    <p>{{myGetVar}}</p>
+
 </div>
 </div>
