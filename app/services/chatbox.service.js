@@ -1,7 +1,7 @@
 (function () {
   'use strict';
-  angular.module('yapp').factory('dataService', dataService);
-  function dataService($http) {
+  angular.module('yapp').factory('chatboxService', chatboxService);
+  function chatboxService($http) {
     return {
 
       getdata: function () {

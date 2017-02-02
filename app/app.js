@@ -82,3 +82,8 @@ var cbapp = angular
           });
 
   });
+
+
+/*cbapp.run(function($http,$rootscope) {
+  $http.defaults.headers.common.Authorization = $rootscope.getItem("loginToken");
+});*/

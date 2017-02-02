@@ -8,14 +8,12 @@
 angular
   .module('yapp')
   .controller(
-    'ChatCtrl', ['$scope', 'dataService', ChatCtrl]);
+    'ChatCtrl', ['$scope', '$state', 'chatboxService', ChatCtrl]);
 
-function ChatCtrl($scope, dataService) {
+function ChatCtrl($scope, $state, chatboxService) {
   $scope.chatlog = "";
 
-/*
   $scope.$state = $state;
-*/
 
 
   /*
@@ -31,13 +29,13 @@ function ChatCtrl($scope, dataService) {
     };
 
 
-    dataService.formPostData(dataObj).then(function (response) {
+    chatboxService.formPostData(dataObj).then(function (response) {
       console.log("in get controller");
       $scope.requestOutput = response.data;
 
       $scope.botOutput = response.data.id;
 
-      console.log(response.data)
+      console.log(response.data);
       console.log("id ==== ", response.data.id);
 
 /*
@@ -50,7 +48,7 @@ function ChatCtrl($scope, dataService) {
 
       document.getElementById("chatlog").innerHTML = document.getElementById("chatlog").innerHTML
         + "<br>"
-        + $scope.userInput
+        + $scope.userInput;
       $scope.chatlog = $scope.chatlog + "\n\r "
         + $scope.userInput;
 
